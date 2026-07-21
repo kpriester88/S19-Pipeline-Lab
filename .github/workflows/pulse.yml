@@ -1,8 +1,15 @@
-name: The First Pulse  
-on: [push]  
-jobs:  
-  test-runner:  
-  runs-on: ubuntu-latest  
-    steps:  
-      - name: Print Status  
-        run: echo "The Conveyor Belt is Operational. Hello DevSecOps!" 
+name: The First Pulse
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  test-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Greeting Test
+        run: echo "Hello DevSecOps!"
