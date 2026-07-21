@@ -13,4 +13,3 @@ jobs:
 
       - name: Run Greeting Test
         run: echo "Hello DevSecOps!"
-        
